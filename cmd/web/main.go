@@ -46,8 +46,6 @@ func main() {
 		errorLog: errorLog,
 	}
 
-	mux := http.NewServeMux()
-
 	// Initialize a new http.Server struct. We set the Addr and Handler fields so
 	// that the server uses the same network address and routes as before, and set
 	// the ErrorLog field so that the server now uses the custom errorLog logger in
