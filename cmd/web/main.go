@@ -5,9 +5,12 @@ import (
 <<<<<<< HEAD
 	"github.com/MussaShaukenov/snippetbox/internal/models"
 	_ "github.com/go-sql-driver/mysql" // New import”
+<<<<<<< HEAD
 	"html/template"
 =======
 >>>>>>> parent of ab1feef (chapter 5: database-driven responses)
+=======
+>>>>>>> parent of 7edf881 (chapter 5: dynamic html templates)
 	"log"
 	"net/http"
 	"os"
@@ -18,6 +21,7 @@ import (
 // we'll add more to it as the build progresses.
 type application struct {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	errorLog      *log.Logger
 	infoLog       *log.Logger
 	snippets      *models.SnippetModel
@@ -26,6 +30,11 @@ type application struct {
 	errorLog *log.Logger
 	infoLog  *log.Logger
 >>>>>>> parent of ab1feef (chapter 5: database-driven responses)
+=======
+	errorLog *log.Logger
+	infoLog  *log.Logger
+	snippets *models.SnippetModel
+>>>>>>> parent of 7edf881 (chapter 5: dynamic html templates)
 }
 
 func main() {
@@ -64,12 +73,8 @@ func main() {
 	// before the main() function exits.
 	defer db.Close()
 
-	templateCache, err := newTemplateCache()
-	if err != nil {
-		errorLog.Fatal(err)
-	}
-
 	app := &application{
+<<<<<<< HEAD
 		infoLog:       infoLog,
 		errorLog:      errorLog,
 		snippets:      &models.SnippetModel{DB: db},
@@ -81,6 +86,11 @@ func main() {
 		infoLog:  infoLog,
 		errorLog: errorLog,
 >>>>>>> parent of ab1feef (chapter 5: database-driven responses)
+=======
+		infoLog:  infoLog,
+		errorLog: errorLog,
+		snippets: &models.SnippetModel{DB: db},
+>>>>>>> parent of 7edf881 (chapter 5: dynamic html templates)
 	}
 
 	// Initialize a new http.Server struct. We set the Addr and Handler fields so
