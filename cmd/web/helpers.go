@@ -31,6 +31,10 @@ func (app *application) notFound(w http.ResponseWriter) {
 	app.clientError(w, http.StatusNotFound)
 }
 
+func (app *application) notAllowed(w http.ResponseWriter) {
+	app.clientError(w, http.StatusMethodNotAllowed)
+}
+
 // Create an newTemplateData() helper, which returns a pointer to a templateData
 // struct initialized with the current year. Note that we're not using the
 // *http.Request parameter here at the moment, but we will do later in the book.
